@@ -1,7 +1,7 @@
 import React from "react";
 import { AppLoading, Font, Asset } from "expo";
 import { Ionicons } from "@expo/vector-icons";
-import { StyleSheet, Text, View } from "react-native";
+import TabNavigation from "./navigation/TabNavigation";
 
 export default class App extends React.Component {
   state = {
@@ -20,11 +20,7 @@ export default class App extends React.Component {
   render() {
     const { loaded } = this.state;
     if (loaded) {
-      return (
-        <View style={styles.container}>
-          <Text>Hello, World!!</Text>
-        </View>
-      );
+      return <TabNavigation />;
     } else {
       return (
         <AppLoading
@@ -36,12 +32,3 @@ export default class App extends React.Component {
     }
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
