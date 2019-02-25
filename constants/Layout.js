@@ -1,4 +1,4 @@
-import { Dimentions } from "react-native";
+import { Dimensions } from "react-native";
 
 const { width, height } = Dimensions.get("screen");
 
